@@ -36,7 +36,7 @@ func TestApplication(t *testing.T) {
 		Debug:     true,
 	}
 
-	app := NewApplication(config)
+	app := NewApplication(config, WithDebugOption(true))
 	app.Register(&LogStarter{})
 	app.Start()
 
